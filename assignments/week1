@@ -1,0 +1,6 @@
+ 1. Wire and Reg Demonstration
+ Write a Verilog module where:
+ • net1 and net2 are wires.
+ • net1 is assigned a constant value and net2 = net1.
+ • Display their values using $display
+
