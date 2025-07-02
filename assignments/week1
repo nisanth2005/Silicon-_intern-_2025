@@ -3,4 +3,53 @@
  • net1 and net2 are wires.
  • net1 is assigned a constant value and net2 = net1.
  • Display their values using $display
+code:
+
+module wi_re;
+wire net1,net2;
+assign net1=1'b0;
+assign net2=net1;
+  initial begin
+$display("the value of net1=%b,net2=%b",net1,net2);
+  end
+endmodule
+_____________________________________
+2.Comparison of Wire and Reg
+ Implement two separate modules:
+ • One using wire and assign
+ • Another using reg and procedural assignment
+ Compare their simulation behavior
+code:
+
+using wire(same as 1)
+
+// Code your design here
+module re_g;
+  reg [3:0]a ;
+initial begin
+a=4'b1010;
+$display("the value of a is =%b",a);
+end 
+endmodule
+_____________________________________
+3.Write a Verilog module using:
+ • wand, wor, tri, triand
+ • Drive them using assign and simulate with #delay and $monitor
+code:
+
+module ne_t;
+wand a,b;
+wor a,b;
+tri a,b;
+triand;
+assign a=2'b10
+assign b=2'b11
+initial begin
+#10
+$monitor("time=%t|a=
+
+
+
+
+
 
