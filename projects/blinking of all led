@@ -1,0 +1,19 @@
+module led_blink(
+input clk,
+output reg[15:0] led
+);
+reg[31:0]counter=0;
+reg[3:0] led_index=0;
+parameter CLOCK_FREQ=100_000_000;
+parameter ONE_SECOND=CLOCK_FREQ;
+always@(posedge clk)begin
+counter<=counter+1;
+if(counter>=ONE_SECOND)begin
+counter<=0;
+led<=16'b0000_0000_0000_0001<<led_index;
+led_index<=led_index+1;
+if(led_index==15)
+led_index<=0;
+end
+end
+endmodule
