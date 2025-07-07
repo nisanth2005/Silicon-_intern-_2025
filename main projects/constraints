@@ -1,1 +1,12 @@
+#clk
+set_property -dict { PACKAGE_PIN N11    IOSTANDARD LVCMOS33 } [get_ports { CLK }];
+#switch
+set_property -dict { PACKAGE_PIN L5    IOSTANDARD LVCMOS33 } [get_ports { SWITCH[0] }];#LSB
+set_property -dict { PACKAGE_PIN L4    IOSTANDARD LVCMOS33 } [get_ports { SWITCH[1] }];
+set_property -dict { PACKAGE_PIN M4    IOSTANDARD LVCMOS33 } [get_ports { SWITCH[2] }];#MSB
+#motor
+set_property -dict { PACKAGE_PIN M16 IOSTANDARD LVCMOS33} [get_ports {MOTOR[0]}];
+set_property -dict { PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports {MOTOR[1]}];
+set_property -dict { PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {MOTOR[2]}];
 
+ 
